@@ -2,6 +2,7 @@
 
 html, body, .capa {
   height: 100%;
+  overflow: auto;
 }
 
 body {
@@ -40,6 +41,10 @@ nav.navbar-mokafy{
   width: 455px;
 }
 
+.collapse.navbar-collapse {
+  justify-content: flex-end;
+}
+
 .separador {
   width: 1px;
   height: 1rem;
@@ -61,15 +66,15 @@ nav.navbar-mokafy{
 
 .capa {
   /* border: 3px solid green; */
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 .texto-capa {
   text-align: center;
   color: #ffffff;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 /* Botoes de capa */
@@ -79,9 +84,9 @@ nav.navbar-mokafy{
   border-radius: 500px;
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
-  padding: 10px 35px;
+  /* padding: 10px 35px; */
   text-transform: uppercase;
-  margin: 0 15px;
+  /* margin: 0 15px; */
   transition: background 0.5s, color 0.5s;
 }
 
@@ -149,9 +154,9 @@ footer {
 /* ---------------- Tipografia ---------------- */
 
 h1 {
-  font-size: 80px!important;
-  font-weight: 900!important;
-  letter-spacing: -0.05rem!important;
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -0.05rem;
   margin-bottom: 50px;
 }
 
@@ -179,4 +184,62 @@ h3 {
 
 #recursos h3 {
   color: #9bf0e1;
+}
+
+
+/* ---------------- Queries ---------------- */
+
+@media (max-width: 767px) {
+  h1{
+    font-size: 50px;
+  }
+
+  .separador {
+    transform: rotate(90deg);
+    margin-left: 10px;
+  }
+
+  .btn-custon {
+    margin: 10px 0;
+  }
+
+  .mokafy-navbar-items{
+    align-items: flex-start;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  .separador {
+    transform: rotate(90deg);
+    margin-left: 10px;
+  }
+
+  .mokafy-navbar-items{
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  h1{
+    font-size: 80px;
+  }
+
+  .mokafy-navbar-items{
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 100px;
+  }
+
+  .mokafy-navbar-items{
+    align-items: center;
+  }
 }
